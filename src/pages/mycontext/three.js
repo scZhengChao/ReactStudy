@@ -1,8 +1,10 @@
 import React, { PureComponent } from 'react';
+import  {  Context ,  Consumer} from './context'
+
 
 function Three(props){
     console.log(props,'three 函数组件当中的 props')
-    throw new Error('函数式组件 检验错误边界')
+    // throw new Error('函数式组件 检验错误边界')
     return (
         <div>
             three

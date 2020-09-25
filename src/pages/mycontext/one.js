@@ -17,13 +17,15 @@ class One extends PureComponent {
         console.log(this.props,'one 当中的props')
         console.log(this.context,'context 对象one')
     }
+  
     render() {
         return (
-            <div>
-                one
-                <Context.Provider  value={this.state.obj}   >
+            <div >
+                one  <span>{this.context.a}</span>
+                {/* <Context.Provider  value={this.state.obj}   >
                     <Comp />
-                </Context.Provider>
+                </Context.Provider> */}
+                <Two></Two>
             </div>
         );
     }

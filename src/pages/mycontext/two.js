@@ -16,7 +16,7 @@ class Two extends PureComponent {
     render() {
         return (
             <div>
-                two
+                two <span>{this.context.a}</span>
                 <Three/>
             </div>
         );

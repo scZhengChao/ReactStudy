@@ -20,10 +20,20 @@ class MyClass extends PureComponent {
     componentDidMount(){
         console.log(this.context,'context 对象 index的')
     }
+    click=()=>{
+        this.setState({
+            obj:{
+                a:'test',
+                b:'2',
+                c:"3"
+            }
+        })
+    }
     render() {
         return (
-            <div>
-                context
+            <div >
+               
+        <div onClick={this.click}> context <span>{this.context.a}</span> </div>
                 {/* 这是写法一 */}
                 {/* <Context.Provider value={this.state.obj}>
                     <Context.Consumer>
@@ -34,7 +44,8 @@ class MyClass extends PureComponent {
                 </Context.Provider> */}
                 {/* 每次都要这么写；就有点繁琐了，通过高阶组件来实现 */}
                 <Context.Provider  value={this.state.obj}   >
-                    <Comp name={'自己的props'} />
+                    {/* <Comp name={'自己的props'} /> */}
+                    <One></One>
                 </Context.Provider>
             </div>
         );
