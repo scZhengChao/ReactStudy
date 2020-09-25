@@ -7,7 +7,11 @@ class One extends PureComponent {
     static contextType = Context
     constructor(props) {
         super(props);
-        this.state = {  };
+        this.state = { 
+            obj:{
+                a:'里层的数据覆盖外层的数据'
+            }
+         };
     }
     componentDidMount(){
         console.log(this.props,'one 当中的props')
@@ -17,7 +21,9 @@ class One extends PureComponent {
         return (
             <div>
                 one
-                <Comp />
+                <Context.Provider  value={this.state.obj}   >
+                    <Comp />
+                </Context.Provider>
             </div>
         );
     }

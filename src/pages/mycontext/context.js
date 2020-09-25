@@ -1,5 +1,10 @@
 import React, { PureComponent } from 'react';
-let Mycontext = React.createContext('defaultValue')
+let Mycontext = React.createContext({
+    a:'default',
+    b:'default',
+    c:'default',
+    name:'default'
+})
 
 /**
  * 注意： 这个地方的props 可能 无法传入；因为你传入到了 Comsumer 上；

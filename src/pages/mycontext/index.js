@@ -18,7 +18,7 @@ class MyClass extends PureComponent {
         console.log(this.props,'每个路由组件的props')
     }
     componentDidMount(){
-        console.log(this.context,'context 对象')
+        console.log(this.context,'context 对象 index的')
     }
     render() {
         return (
